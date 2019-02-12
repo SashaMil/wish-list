@@ -44,7 +44,7 @@ class Tab extends Component {
                 return;
             break;
             case 'alphabetical':
-                sortedList = sortedList.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
+                sortedList = sortedList.sort((a,b) => (a.name.toUpperCase() > b.name.toUpperCase()) ? 1 : ((b.name.toUpperCase() > a.name.toUpperCase()) ? -1 : 0));
                 this.setState({
                     list: sortedList,
                 });
@@ -63,8 +63,6 @@ class Tab extends Component {
             break;
         }
     }
-
-
 
     orderOfItem = ( index, direction ) => {
         Array.prototype.move = function(from, to) {
