@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import Header from './components/Header/Header';
 import DeleteTab from './components/DeleteTab/DeleteTab';
 import TabCreator from './containers/TabCreator/TabCreator';

@@ -50,13 +50,13 @@ class Tab extends Component {
                 });
             break;
             case 'ascending':
-                sortedList = sortedList.sort((a,b) => (a.price > b.price) ? 1 : ((b.price > a.price) ? -1 : 0));
+                sortedList = sortedList.sort((a,b) => (a.price - b.price));
                 this.setState({
                     list: sortedList,
                 });
             break;
             case 'descending':
-                sortedList = sortedList.sort((a,b) => (a.price < b.price) ? 1 : ((b.price < a.price) ? -1 : 0));
+                sortedList = sortedList.sort((a, b) => (b.price - a.price));
                 this.setState({
                     list: sortedList,
                 });
